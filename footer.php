@@ -143,6 +143,7 @@ var picker = new Lightpick({
         window.location.href = "delivery_t.php";
     });
     $("#showpartner").click(function() {
+        loader();
         var returnLog = logAction(logs.yourp);
         console.log(logs.yourp);
         window.location.href = "your_prtnr.php";
@@ -153,5 +154,4 @@ var picker = new Lightpick({
         window.location.href = "delivery_sch.php";
             
     });
-
 </script>

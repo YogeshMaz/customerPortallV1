@@ -1,6 +1,6 @@
 <?php
 $localHost = "http://localhost/customerportal/datapages/";
-$gitHost = "https://supreme-invention-wr9g5j7w7v6x3gxw7-3000.app.github.dev/datapages/";
+$gitHost = "https://organic-doodle-x59vpqwjwpjxfv9wv.github.dev//datapages/";
 $liveHost = "https://customerportal.machinemaze.com/datapages/";
 ?>
 <div id="navbar-wrapper">

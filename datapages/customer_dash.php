@@ -111,16 +111,16 @@ $total_project_count = $project_dash_res_count + $completepro_dash_res_count + $
                           <div class="col mr-2">
                             <div class="text-xs fw-bold text-center text-uppercase mb-1 text-secondary">Total Projects</div>
                             <div class="h4 mb-0 fw-bold text-center justify-content-around d-flex text-dark">
-                              <?php if (in_array('PC&A Summary', $Category) && $summaryDetails['data'][0]['Total_Projects_PCndA'] != 0) {
-                              ?> <span><?php echo $summaryDetails['data'][0]['Total_Projects_PCndA'] ?? 0; ?> <br> <span class="fs12"><?php echo "PC&A"; ?></span></span>
+                              <?php if (in_array('PC&A Summary', $Category) && $summaryDetails['result']['data']['Total_Projects_PCndA'] != 0) {
+                              ?> <span><?php echo $summaryDetails['result']['data']['Total_Projects_PCndA'] ?? 0; ?> <br> <span class="fs12"><?php echo "PC&A"; ?></span></span>
                               <?php
                               }
-                              if (in_array("Fabrication Summary", $Category) && $summaryDetails['data'][0]['Total_Projects_FAB'] != 0) {
-                              ?> <span><?php echo $summaryDetails['data'][0]['Total_Projects_FAB'] ?? 0; ?> <br> <span class="fs12"><?php echo "Fabrication"; ?></span></span>
+                              if (in_array("Fabrication Summary", $Category) && $summaryDetails['result']['data']['Total_Projects_FAB'] != 0) {
+                              ?> <span><?php echo $summaryDetails['result']['data']['Total_Projects_FAB'] ?? 0; ?> <br> <span class="fs12"><?php echo "Fabrication"; ?></span></span>
                               <?php
                               }
-                              if (in_array("EMS Summary", $Category) && $summaryDetails['data'][0]['Total_Projects_EMS'] != 0) {
-                              ?> <span><?php echo $summaryDetails['data'][0]['Total_Projects_EMS'] ?? 0; ?> <br> <span class="fs12"><?php echo "EMS"; ?></span></span>
+                              if (in_array("EMS Summary", $Category) && $summaryDetails['result']['data']['Total_Projects_EMS'] != 0) {
+                              ?> <span><?php echo $summaryDetails['result']['data']['Total_Projects_EMS'] ?? 0; ?> <br> <span class="fs12"><?php echo "EMS"; ?></span></span>
                               <?php
                               } ?>
                             </div>
@@ -145,16 +145,16 @@ $total_project_count = $project_dash_res_count + $completepro_dash_res_count + $
 
                             <div class="h4 mb-0 fw-bold text-center justify-content-around d-flex text-dark">
                               <?php
-                              if (in_array('PC&A Summary', $Category) && $summaryDetails['data'][0]['Total_Projects_PCndA'] != 0) {
-                              ?> <span><?php echo $summaryDetails['data'][0]['Production_Projects_PCndA'] ?? 0; ?> <br> <span class="fs12"><?php echo "PC&A"; ?></span></span>
+                              if (in_array('PC&A Summary', $Category) && $summaryDetails['result']['data']['Total_Projects_PCndA'] != 0) {
+                              ?> <span><?php echo $summaryDetails['result']['data']['Production_Projects_PCndA'] ?? 0; ?> <br> <span class="fs12"><?php echo "PC&A"; ?></span></span>
                               <?php
                               }
-                              if (in_array("Fabrication Summary", $Category) && $summaryDetails['data'][0]['Total_Projects_FAB'] != 0) {
-                              ?> <span><?php echo $summaryDetails['data'][0]['Production_Projects_FAB'] ?? 0; ?> <br> <span class="fs12"><?php echo "Fabrication"; ?></span></span>
+                              if (in_array("Fabrication Summary", $Category) && $summaryDetails['result']['data']['Total_Projects_FAB'] != 0) {
+                              ?> <span><?php echo $summaryDetails['result']['data']['Production_Projects_FAB'] ?? 0; ?> <br> <span class="fs12"><?php echo "Fabrication"; ?></span></span>
                               <?php
                               }
-                              if (in_array("EMS Summary", $Category) && $summaryDetails['data'][0]['Total_Projects_EMS'] != 0) {
-                              ?> <span><?php echo $summaryDetails['data'][0]['Production_Projects_EMS'] ?? 0; ?> <br> <span class="fs12"><?php echo "EMS"; ?></span></span>
+                              if (in_array("EMS Summary", $Category) && $summaryDetails['result']['data']['Total_Projects_EMS'] != 0) {
+                              ?> <span><?php echo $summaryDetails['result']['data']['Production_Projects_EMS'] ?? 0; ?> <br> <span class="fs12"><?php echo "EMS"; ?></span></span>
                               <?php
                               } ?>
                             </div>
@@ -175,16 +175,16 @@ $total_project_count = $project_dash_res_count + $completepro_dash_res_count + $
                           <div class="col mr-2">
                             <div class="text-xs fw-bold text-center text-uppercase mb-1 text-secondary"> Open Projects</div>
                             <div class="h4 mb-0 fw-bold text-center justify-content-around d-flex text-dark">
-                              <?php if (in_array('PC&A Summary', $Category) && $summaryDetails['data'][0]['Total_Projects_PCndA'] != 0) {
-                              ?> <span><?php echo $summaryDetails['data'][0]['Open_Projects_PCndA'] ?? 0; ?> <br> <span class="fs12"><?php echo "PC&A"; ?></span></span>
+                              <?php if (in_array('PC&A Summary', $Category) && $summaryDetails['result']['data']['Total_Projects_PCndA'] != 0) {
+                              ?> <span><?php echo $summaryDetails['result']['data']['Open_Projects_PCndA'] ?? 0; ?> <br> <span class="fs12"><?php echo "PC&A"; ?></span></span>
                               <?php
                               }
-                              if (in_array("Fabrication Summary", $Category) && $summaryDetails['data'][0]['Total_Projects_FAB'] != 0) {
-                              ?> <span><?php echo $summaryDetails['data'][0]['Open_Projects_FAB'] ?? 0; ?> <br> <span class="fs12"><?php echo "Fabrication"; ?></span></span>
+                              if (in_array("Fabrication Summary", $Category) && $summaryDetails['result']['data']['Total_Projects_FAB'] != 0) {
+                              ?> <span><?php echo $summaryDetails['result']['data']['Open_Projects_FAB'] ?? 0; ?> <br> <span class="fs12"><?php echo "Fabrication"; ?></span></span>
                               <?php
                               }
-                              if (in_array("EMS Summary", $Category) && $summaryDetails['data'][0]['Total_Projects_EMS'] != 0) {
-                              ?> <span><?php echo $summaryDetails['data'][0]['Open_Projects_EMS'] ?? 0; ?> <br> <span class="fs12"><?php echo "EMS"; ?></span></span>
+                              if (in_array("EMS Summary", $Category) && $summaryDetails['result']['data']['Total_Projects_EMS'] != 0) {
+                              ?> <span><?php echo $summaryDetails['result']['data']['Open_Projects_EMS'] ?? 0; ?> <br> <span class="fs12"><?php echo "EMS"; ?></span></span>
                               <?php
                               } ?>
                             </div>
@@ -208,16 +208,16 @@ $total_project_count = $project_dash_res_count + $completepro_dash_res_count + $
                             <div class="text-xs fw-bold text-center text-uppercase mb-1 text-secondary">Onhold Projects</div>
                             <div class="h4 mb-0 fw-bold text-center justify-content-around d-flex text-dark">
                               <?php
-                              if (in_array('PC&A Summary', $Category) && $summaryDetails['data'][0]['Total_Projects_PCndA'] != 0) {
-                              ?> <span><?php echo $summaryDetails['data'][0]['Onhold_Projects_PCndA'] ?? 0; ?> <br> <span class="fs12"><?php echo "PC&A"; ?></span></span>
+                              if (in_array('PC&A Summary', $Category) && $summaryDetails['result']['data']['Total_Projects_PCndA'] != 0) {
+                              ?> <span><?php echo $summaryDetails['result']['data']['Onhold_Projects_PCndA'] ?? 0; ?> <br> <span class="fs12"><?php echo "PC&A"; ?></span></span>
                               <?php
                               }
-                              if (in_array("Fabrication Summary", $Category) && $summaryDetails['data'][0]['Total_Projects_FAB'] != 0) {
-                              ?> <span><?php echo $summaryDetails['data'][0]['Onhold_Projects_FAB'] ?? 0; ?> <br> <span class="fs12"><?php echo "Fabrication"; ?></span></span>
+                              if (in_array("Fabrication Summary", $Category) && $summaryDetails['result']['data']['Total_Projects_FAB'] != 0) {
+                              ?> <span><?php echo $summaryDetails['result']['data']['Onhold_Projects_FAB'] ?? 0; ?> <br> <span class="fs12"><?php echo "Fabrication"; ?></span></span>
                               <?php
                               }
-                              if (in_array("EMS Summary", $Category) && $summaryDetails['data'][0]['Total_Projects_EMS'] != 0) {
-                              ?> <span><?php echo $summaryDetails['data'][0]['Onhold_Projects_EMS'] ?? 0; ?> <br> <span class="fs12"><?php echo "EMS"; ?></span></span>
+                              if (in_array("EMS Summary", $Category) && $summaryDetails['result']['data']['Total_Projects_EMS'] != 0) {
+                              ?> <span><?php echo $summaryDetails['result']['data']['Onhold_Projects_EMS'] ?? 0; ?> <br> <span class="fs12"><?php echo "EMS"; ?></span></span>
                               <?php
                               } ?>
                             </div>
@@ -241,16 +241,16 @@ $total_project_count = $project_dash_res_count + $completepro_dash_res_count + $
                           <div class="col mr-2">
                             <div class="text-xs fw-bold text-center text-uppercase mb-1 text-secondary">Cancelled Projects</div>
                             <div class="h4 mb-0 fw-bold text-center justify-content-around d-flex text-dark">
-                              <?php if (in_array('PC&A Summary', $Category) && $summaryDetails['data'][0]['Total_Projects_PCndA'] != 0) {
-                              ?> <span><?php echo $summaryDetails['data'][0]['Cancelled_Projects_PCndA'] ?? 0; ?> <br> <span class="fs12"><?php echo "PC&A"; ?></span></span>
+                              <?php if (in_array('PC&A Summary', $Category) && $summaryDetails['result']['data']['Total_Projects_PCndA'] != 0) {
+                              ?> <span><?php echo $summaryDetails['result']['data']['Cancelled_Projects_PCndA'] ?? 0; ?> <br> <span class="fs12"><?php echo "PC&A"; ?></span></span>
                               <?php
                               }
-                              if (in_array("Fabrication Summary", $Category) && $summaryDetails['data'][0]['Total_Projects_FAB'] != 0) {
-                              ?> <span><?php echo $summaryDetails['data'][0]['Cancelled_Projects_FAB'] ?? 0; ?> <br> <span class="fs12"><?php echo "Fabrication"; ?></span></span>
+                              if (in_array("Fabrication Summary", $Category) && $summaryDetails['result']['data']['Total_Projects_FAB'] != 0) {
+                              ?> <span><?php echo $summaryDetails['result']['data']['Cancelled_Projects_FAB'] ?? 0; ?> <br> <span class="fs12"><?php echo "Fabrication"; ?></span></span>
                               <?php
                               }
-                              if (in_array("EMS Summary", $Category) && $summaryDetails['data'][0]['Total_Projects_EMS'] != 0) {
-                              ?> <span><?php echo $summaryDetails['data'][0]['Cancelled_Projects_EMS'] ?? 0; ?> <br> <span class="fs12"><?php echo "EMS"; ?></span></span>
+                              if (in_array("EMS Summary", $Category) && $summaryDetails['result']['data']['Total_Projects_EMS'] != 0) {
+                              ?> <span><?php echo $summaryDetails['result']['data']['Cancelled_Projects_EMS'] ?? 0; ?> <br> <span class="fs12"><?php echo "EMS"; ?></span></span>
                               <?php
                               } ?>
                             </div>
@@ -275,7 +275,7 @@ $total_project_count = $project_dash_res_count + $completepro_dash_res_count + $
 
                 <div class="row">
 
-                  <?php if ($summaryDetails['data'][0]['Units_in_delivered_EA'] != 0 || $summaryDetails['data'][0]['Units_in_delivered_KG'] != 0 || $summaryDetails['data'][0]['Units_in_delivered_MTS'] != 0) { ?>
+                  <?php if ($summaryDetails['result']['data']['Units_Delivered_EA'] != 0 || $summaryDetails['result']['data']['Units_Delivered_KG'] != 0 || $summaryDetails['result']['data']['Units_Delivered_MT'] != 0) { ?>
                     <div class="col-xl-6 col-md-6 mb-2">
                       <div class="card shadow h-100 border-top border-4 border-primary">
                         <div class="card-body bg-light">
@@ -283,18 +283,18 @@ $total_project_count = $project_dash_res_count + $completepro_dash_res_count + $
                             <div class="col p-1">
                               <div class="text-xs fw-bold text-uppercase mb-1 text-secondary">Units Delivered</div>
                               <div class="h5 mb-0 mr-3 fw-bold text-dark">
-                                <?php if (isset($summaryDetails['data'][0]['Units_in_delivered_EA']) && $summaryDetails['data'][0]['Units_in_delivered_EA'] != 0) { ?>
-                                  <span class="pd_br1"><?php echo $summaryDetails['data'][0]['Units_in_delivered_EA'] ?? "-" ?> <small class="fs13"><?php echo "EA" ?></small></span>
+                                <?php if (isset($summaryDetails['result']['data']['Units_Delivered_EA']) && $summaryDetails['result']['data']['Units_Delivered_EA'] != 0) { ?>
+                                  <span class="pd_br1"><?php echo $summaryDetails['result']['data']['Units_Delivered_EA'] ?? "-" ?> <small class="fs13"><?php echo "EA" ?></small></span>
                                 <?php
                                 }
-                                if (isset($summaryDetails['data'][0]['Units_in_delivered_KG']) && $summaryDetails['data'][0]['Units_in_delivered_KG'] != 0) {
+                                if (isset($summaryDetails['result']['data']['Units_Delivered_KG']) && $summaryDetails['result']['data']['Units_Delivered_KG'] != 0) {
                                 ?>
-                                  <span class="pd_br1"><?php echo $summaryDetails['data'][0]['Units_in_delivered_KG'] ?? "-" ?> <small class="fs13"><?php echo "kg" ?></small></span>
+                                  <span class="pd_br1"><?php echo $summaryDetails['result']['data']['Units_Delivered_KG'] ?? "-" ?> <small class="fs13"><?php echo "kg" ?></small></span>
                                 <?php
                                 }
-                                if (isset($summaryDetails['data'][0]['Units_in_delivered_MTS']) && $summaryDetails['data'][0]['Units_in_delivered_MTS'] != 0) {
+                                if (isset($summaryDetails['result']['data']['Units_Delivered_MT']) && $summaryDetails['result']['data']['Units_Delivered_MT'] != 0) {
                                 ?>
-                                  <span class="pd_br1"><?php echo $summaryDetails['data'][0]['Units_in_delivered_MTS'] ?? "-" ?> <small class="fs13"><?php echo "Mts" ?></small></span>
+                                  <span class="pd_br1"><?php echo $summaryDetails['result']['data']['Units_Delivered_MT'] ?? "-" ?> <small class="fs13"><?php echo "Mts" ?></small></span>
                                 <?php
                                 }
                                 ?>
@@ -313,7 +313,7 @@ $total_project_count = $project_dash_res_count + $completepro_dash_res_count + $
                     // 
                   } ?>
 
-                  <?php if ($summaryDetails['data'][0]['Units_in_production_EA'] != 0 || $summaryDetails['data'][0]['Units_in_production_KG'] != 0 || $summaryDetails['data'][0]['Units_in_production_MTS'] != 0) { ?>
+                  <?php if ($summaryDetails['result']['data']['Units_Not_Delivered_EA'] != 0 || $summaryDetails['result']['data']['Units_Not_Delivered_KG'] != 0 || $summaryDetails['result']['data']['Units_Not_Delivered_MT'] != 0) { ?>
                     <div class="col-xl-6 col-md-6 mb-2">
                       <div class="card shadow h-100 border-top border-4 border-primary">
                         <div class="card-body bg-light">
@@ -322,19 +322,19 @@ $total_project_count = $project_dash_res_count + $completepro_dash_res_count + $
                               <div class="text-xs fw-bold text-uppercase mb-2 text-secondary">Units in production</div>
                               <div class="h5 mb-0 mr-3 fw-bold text-dark">
                                 <?php
-                                if (isset($summaryDetails['data'][0]['Units_in_production_EA'])) {
+                                if (isset($summaryDetails['result']['data']['Units_Not_Delivered_EA'])) {
                                 ?>
-                                  <span class="pd_br1"><?php echo $summaryDetails['data'][0]['Units_in_production_EA'] ?? "-" ?> <small class="fs13"><?php echo "EA" ?></small></span>
+                                  <span class="pd_br1"><?php echo $summaryDetails['result']['data']['Units_Not_Delivered_EA'] ?? "-" ?> <small class="fs13"><?php echo "EA" ?></small></span>
                                 <?php
                                 }
-                                if ($summaryDetails['data'][0]['Units_in_production_EA'] && $summaryDetails['data'][0]['Units_in_production_KG'] != 0) {
+                                if ($summaryDetails['result']['data']['Units_Not_Delivered_EA'] && $summaryDetails['result']['data']['Units_Not_Delivered_KG'] != 0) {
                                 ?>
-                                  <span class="pd_br1"><?php echo $summaryDetails['data'][0]['Units_in_production_KG'] ?? "-" ?> <small class="fs13"><?php echo "kg" ?></small></span>
+                                  <span class="pd_br1"><?php echo $summaryDetails['result']['data']['Units_Not_Delivered_KG'] ?? "-" ?> <small class="fs13"><?php echo "kg" ?></small></span>
                                 <?php
                                 }
-                                if (isset($summaryDetails['data'][0]['Units_in_production_MTS']) && $summaryDetails['data'][0]['Units_in_production_MTS'] != 0) {
+                                if (isset($summaryDetails['result']['data']['Units_Not_Delivered_MT']) && $summaryDetails['result']['data']['Units_Not_Delivered_MT'] != 0) {
                                 ?>
-                                  <span class="pd_br1"><?php echo $summaryDetails['data'][0]['Units_in_production_MTS'] ?? "-" ?> <small class="fs13"><?php echo "Mts" ?></small></span>
+                                  <span class="pd_br1"><?php echo $summaryDetails['result']['data']['Units_Not_Delivered_MT'] ?? "-" ?> <small class="fs13"><?php echo "Mts" ?></small></span>
                                 <?php
                                 }
                                 ?>
@@ -559,6 +559,7 @@ $partnerCollection = []; // Initialize an empty array to store partner data
 
 
 /** To collect the Manufacturing partner location data */
+// echo " fe " . json_encode($Partner_PCndA_Details['data']);
 if (isset($Partner_PCndA_Details['data'])) {
   foreach ($Partner_PCndA_Details['data'] as $eachMndFDetails) {
     $partnerCollection[] = $eachMndFDetails;
