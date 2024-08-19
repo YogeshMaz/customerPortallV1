@@ -1,0 +1,21 @@
+                          <?php
+                          $pattern = "/[?\s:]/";
+                          $Badge_Image = "";
+                          if ($record['data'][0]["Badge_Image"] != null && array_key_exists('Badge_Image', $record['data'][0])) {
+                            $Badge_Image = preg_split($pattern, $record['data'][0]["Badge_Image"])[1] ?? "";
+                          }
+                          ?>
+                          <td class="text-center">
+                            <?php
+                            if (!empty($Badge_Image)) {
+                              echo "<img class='partner_rating' src='https://creatorapp.zohopublic.in/file/arun.ramu_machinemaze/request-for-quote/MF_Partner_Report_For_Customer_Portal/" .
+                                $record['data'][0]['ID'] .
+                                "/Badge_Image/image-download/GDGb9eRTmOR2YOs0XXHpuW7mM8am9xEGY01DDtuu7Us3Kd69kVKpn8hW1TyR8eFugRrWuSANeYX1z42uH8EUeBwPr4gDwzM0m1kG?" .
+                                $Badge_Image .
+                                "' alt='Badge Image'/>";
+                            } else {
+                              echo "No File!";
+                            }
+                            ?>
+
+                            

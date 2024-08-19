@@ -1,0 +1,106 @@
+@media screen and (max-width: 800px) {
+    li.nav-item {
+        text-align: left!important;
+    }
+    li.nav-item a.nav-link span {
+        display: inline-block!important;
+    }
+    .navbar-expand-lg .navbar-nav .dropdown-menu {
+        box-shadow: 0 0 5px 0 #d8d8d8;
+    }
+    .btn-secondary.dropdown-toggle strong {
+        display: none;
+    }
+    .btn-secondary.dropdown-toggle span.ss {
+        display: none!important;
+    }
+    .navbar-nav.mypro .dropdown-menu {
+        left: -86px;
+    }
+    .nav-pills span.badge {
+        margin-bottom: 10px;
+    }
+    ul.navbar-nav.my-2.my-lg-0.mypro {
+        margin-right: -24px;
+    }
+    .profilebg {
+        background-size: inherit;
+        height: auto;
+        width: initial;
+    }
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+      
+      li.nav-item {
+        text-align: left!important;
+    }
+    li.nav-item a.nav-link span {
+        display: inline-block!important;
+    }
+    .navbar-expand-lg .navbar-nav .dropdown-menu {
+        box-shadow: 0 0 5px 0 #d8d8d8;
+    }
+    .btn-secondary.dropdown-toggle strong {
+        display: none;
+    }
+    .btn-secondary.dropdown-toggle span.ss {
+        display: none!important;
+    }
+    .navbar-nav.mypro .dropdown-menu {
+        left: -86px;
+    }
+    .nav-pills span.badge {
+        margin-bottom: 10px;
+    }
+    ul.navbar-nav.my-2.my-lg-0.mypro {
+        margin-right: -24px;
+    }
+    .profilebg {
+        background-size: inherit;
+        height: auto;
+        width: initial;
+    }
+
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+      li.nav-item {
+        text-align: left!important;
+    }
+    li.nav-item a.nav-link span {
+        display: inline-block!important;
+    }
+    .navbar-expand-lg .navbar-nav .dropdown-menu {
+        box-shadow: 0 0 5px 0 #d8d8d8;
+    }
+    .btn-secondary.dropdown-toggle strong {
+        display: none;
+    }
+    .btn-secondary.dropdown-toggle span.ss {
+        display: none!important;
+    }
+    .navbar-nav.mypro .dropdown-menu {
+        left: -86px;
+    }
+    .nav-pills span.badge {
+        margin-bottom: 10px;
+    }
+    ul.navbar-nav.my-2.my-lg-0.mypro {
+        margin-right: -24px;
+    }
+    .profilebg {
+        background-size: inherit;
+        height: auto;
+        width: initial;
+    }
+    li.nav-item a.nav-link span {
+        display: none;
+    }
+}

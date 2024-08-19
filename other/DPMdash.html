@@ -1,0 +1,796 @@
+<html lang="en">
+
+<head>
+  <title>DPM</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" integrity="sha512-rqQltXRuHxtPWhktpAZxLHUVJ3Eombn3hvk9PHjV/N5DMUYnzKPC1i3ub0mEXgFzsaZNeJcoE0YHq0j/GFsdGg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        ul {
+            padding: 0 15px;
+            list-style: none;
+            margin: 0;
+        }
+        li {
+            color: #999;
+            border-bottom: 1px solid #e4e4e4;
+            padding: 5px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        li p {
+            font-size: 15px;
+            margin-bottom: 0;
+        }
+        header {
+            padding: 15px 0;
+            text-align: center;
+            background: #fff0;
+            margin-bottom: 5px;
+        }
+        .card.mb-4.mt-2.tablecard {
+            border-color: #ededed;
+        }
+        p.text-dark {
+            font-size: 14px;
+        }
+        body{ background: #f2f2f296; }
+        i.fa.fa-user.fw-100.bg-primary.text-light.rounded-circle.p-2 {
+            background: #0070ba !important;
+        }
+        i.fa.fa-user.fw-100 {
+            font-weight: 100;
+            box-shadow: 6px 2px 0px 1px #0070ba45;
+        }
+        span.badge.bg-primary-subtle.text-primary.mx-2 {
+            color: #fff !important;
+            background: #0070ba !important;
+        }
+        span.badge.text-primary.bg-primary-subtle.mt-1 {
+            color: #0070ba !important;
+            background: #0070ba26 !important;
+        }
+        span.badge.bg-primary { background: #0070ba!important; }
+        .common_card{ 
+            background-color: #fff; 
+            border-radius: 10px;
+            padding: 15px;
+        }
+        .common_card h6 {
+            color: #8e8e8e;
+        }
+        .subSec{
+            background: #f2f2f296;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 5px 0;
+        }
+        .subSec h6 {
+            margin-bottom: 0;
+            color: #212529;
+        }
+        label{ width: 100%;cursor: pointer; }
+
+        #toggle1:checked ~ div#ic, #toggle2:checked ~ div#dc,
+        #toggle3:checked ~ div#vls, #toggle4:checked ~ div#vt,
+        #toggle5:checked ~ div#vc, #toggle6:checked ~ div#uupc,
+        #toggle7:checked ~ div#vcType1, #toggle8:checked ~ div#vcType2,
+        #toggle9:checked ~ div#rfqSec, #toggle10:checked ~ div#cuspoSec{
+            display: block;
+        }
+        #toggle1:checked ~ label i, #toggle2:checked ~ label i,
+        #toggle3:checked ~ label i, #toggle4:checked ~ label i,
+        #toggle5:checked ~ label i, #toggle6:checked ~ label i,
+        #toggle7:checked ~ label i, #toggle8:checked ~ label i, 
+        #toggle9:checked ~ label i, #toggle10:checked ~ label i,
+        #tcDrop:checked ~ label i, #tvDrop:checked ~ label i{
+            transform: rotate(180deg);
+            color: #0070ba;
+        }
+
+        #tcDrop:checked ~ div#tcSec, #tvDrop:checked ~ div#tvSec{
+            display: block;
+        }
+        #userAcqCheck:checked ~ label .common_card{
+            border: 1px solid #b1d0fe;
+        }
+        #userAcqCheck:checked ~ label div.common_card{ border: 1px dashed #0070ba; }
+
+        #userAcqCheck:checked ~ div#userAcq, #userEngCheck:checked ~ div#userEng,
+        #sc:checked ~ div#supplyChain, #rev:checked ~ div#revenue
+        {
+            display: block;
+        }
+        
+        .widgtSec{  display: none; }
+
+        .toggle-input{ display: none; }
+
+        .dropSec{ display: none; }
+
+        label .common_card:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 10px 18px rgb(199 199 199 / 20%);
+            transition: all .25s ease;
+        }
+        i.fa.fa-chevron-circle-down.mt-1 {
+            font-size: 18px;
+        }
+        .text-primary{
+            color:#0070ba!important;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="costSec">
+        <!------------Direct product metrics------------->
+        <div style="width:100%;" class="container">
+            <div class="row">
+
+                <header>
+                    <div class="head">
+                        <h5>Direct Product Metrics</h5>
+                    </div>
+                </header>
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <label for="userAcqCheck">
+                            <div class="common_card">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="rounded-circle mt-2">
+                                            <i class="fa fa-user fw-100 bg-primary text-light rounded-circle p-2"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <h6>Goal</h6>
+                                        <h5>User Acquisition</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="userEngCheck">
+                            <div class="common_card">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="rounded-circle mt-2">
+                                            <i class="fa fa-user fw-100 bg-primary text-light rounded-circle p-2"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <h6>Goal</h6>
+                                        <h5>User Engagement</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="rev">
+                            <div class="common_card">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="rounded-circle mt-2">
+                                            <i class="fa fa-user fw-100 bg-primary text-light rounded-circle p-2"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <h6>Goal</h6>
+                                        <h5>Revenue</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="sc">
+                            <div class="common_card">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="rounded-circle mt-2">
+                                            <i class="fa fa-user fw-100 bg-primary text-light rounded-circle p-2"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <h6>Goal</h6>
+                                        <h5>Supply Chain</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="row my-4">
+                    <div class="col-md-12">
+
+                        <div class="common_card">
+
+                            <input type="radio" id="userAcqCheck" name="widgt" class="d-none" checked>
+
+                            <div id="userAcq" class="widgtSec">
+                                <div class="row">
+                                    <h6 class="text-primary px-3">User Acquisition</h6>
+
+                                    <div class="col-md-12 px-3">
+                                        <div class="subSec">
+                                            <input type="checkbox" id="tcDrop" class="toggle-input">
+                                            <label for="tcDrop">
+                                                <div class="d-flex justify-content-between">
+                                                    <h6>
+                                                        Total  Customers
+                                                        <span class="badge bg-primary-subtle text-primary mx-2">153</span>
+                                                    </h6>
+                                                    <a><i class="fa fa-chevron-circle-down mt-1"></i></a>
+                                                </div>
+                                            </label>
+                                       
+                                            <div id="tcSec" class="dropSec">
+                                                <div class="row border-top mt-3 pt-2">
+                                                    <div class="col-md-12">
+                                                        <div class="subSec bg-light-subtle">
+                                                            <input type="checkbox" id="toggle1" class="toggle-input">
+                                                            <label for="toggle1">
+                                                                <div class="d-flex justify-content-between">    
+                                                                    <h6>
+                                                                        International Customers
+                                                                        <span class="badge bg-primary-subtle text-primary mx-2">24</span>
+                                                                    </h6> 
+                                                                    
+                                                                    <a><i class="fa fa-chevron-circle-down mt-1"></i></a>
+                                                                </div>
+                                                            </label>
+                                                            <div id="ic" class="mt-2 dropSec">
+                                                                <span class="badge text-primary bg-primary-subtle mt-1">
+                                                                    STANLEY BLACK & DECKER INDIA PVT LTD
+                                                                </span>
+                                                                <span class="badge text-primary bg-primary-subtle mt-1">
+                                                                    HEN NOZZLES
+                                                                </span>
+                                                                <span class="badge text-primary bg-primary-subtle mt-1">
+                                                                    OMAN HARDWARE CO LTD LLC
+                                                                </span>
+                                                                <span class="badge text-primary bg-primary-subtle mt-1">
+                                                                    METRUCKS
+                                                                </span>
+                                                                <span class="badge text-primary bg-primary-subtle mt-1">
+                                                                    CRC EVANS
+                                                                </span>
+                                                                <span class="badge text-primary bg-primary-subtle mt-1">
+                                                                    TVARIT GMBH
+                                                                </span>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="subSec bg-light-subtle">
+                                                            <input type="checkbox" id="toggle2" class="toggle-input">
+                                                            <label for="toggle2">
+                                                                <div class="d-flex justify-content-between">  
+                                                                    <h6>
+                                                                        Domestic Customers
+                                                                        <span class="badge bg-primary-subtle text-primary mx-2">129</span>
+                                                                    </h6>
+                                                                    <a><i class="fa fa-chevron-circle-down mt-1"></i></a>
+                                                                </div>
+                                                            </label>
+                                                            <div id="dc" class="mt-2 dropSec">
+                                                                <span class="badge text-primary bg-primary-subtle mt-1">
+                                                                    PERT INFO CONSULTING PVT LTD
+                                                                </span>
+                                                                <span class="badge text-primary bg-primary-subtle mt-1">
+                                                                    BHARAT FRITZ WERNER AQUA GROUP
+                                                                </span>
+                                                                <span class="badge text-primary bg-primary-subtle mt-1">
+                                                                    SEIZO CNC PRIVATE LIMITED
+                                                                </span>
+                                                                <span class="badge text-primary bg-primary-subtle mt-1">
+                                                                    SIEMENS GAMESA RENEWABLE POWER PRIVATE LIMITED
+                                                                </span>
+                                                                <span class="badge text-primary bg-primary-subtle mt-1">
+                                                                    NASH INDUSTRIES (1) PVT. LTD.
+                                                                </span>
+                                                                <span class="badge text-primary bg-primary-subtle mt-1">
+                                                                    MEDHA SERVO DRIVES PVT. LTD MATEXNET PVT LTD ABB
+                                                                </span>
+                                                                <span class="badge text-primary bg-primary-subtle mt-1">
+                                                                    REVATHI EQUIPMENT LIMITED
+                                                                </span>
+                                                                <span class="badge text-primary bg-primary-subtle mt-1">
+                                                                    CALDWELL MANUFACTURING INDIA PVT LTD
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 px-3">
+                                        <div class="subSec">
+                                            <input type="checkbox" id="tvDrop" class="toggle-input">
+                                            <label for="tvDrop">
+                                                <div class="d-flex justify-content-between">
+                                                    <h6>
+                                                        Total  Vendors
+                                                        <span class="badge bg-primary-subtle text-primary mx-2">595</span>
+                                                    </h6>
+                                                    <a><i class="fa fa-chevron-circle-down mt-1"></i></a>
+                                                </div>
+                                            </label>
+
+                                            <div id="tvSec" class="dropSec">
+                                                <div class="row border-top mt-3 pt-2">
+
+                                                    <div class="col-md-12">
+                                                        <div class="subSec bg-light-subtle">
+                                                            <input type="checkbox" id="toggle3" class="toggle-input">
+                                                            <label for="toggle3">
+                                                                <div class="d-flex justify-content-between">
+                                                                    <h6>
+                                                                        Vendors Location Split 
+                                                                        <span class="badge bg-primary-subtle text-primary mx-2">3</span>
+                                                                    </h6>
+                                                                    <a><i class="fa fa-chevron-circle-down mt-1"></i></a>
+                                                                </div>
+                                                            </label>
+                                                            <div id="vls" class="mt-2 dropSec vendorSub">    
+                                                                <span class="badge text-primary bg-primary-subtle mt-1">
+                                                                    Tamil Nadu
+                                                                    <span class="badge bg-primary">
+                                                                    3
+                                                                    </span>
+                                                                </span>
+                                                                <span class="badge text-primary bg-primary-subtle mt-1">
+                                                                    Coimbatore
+                                                                    <span class="badge bg-primary">
+                                                                    3
+                                                                    </span>
+                                                                </span>
+                                                                <span class="badge text-primary bg-primary-subtle mt-1">
+                                                                    Karnataka
+                                                                    <span class="badge bg-primary">
+                                                                    3
+                                                                    </span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-12">
+                                                        <div class="subSec bg-light-subtle">
+                                                            <input type="checkbox" id="toggle4" class="toggle-input">
+                                                            <label for="toggle4">
+                                                                <div class="d-flex justify-content-between">
+                                                                    <h6>
+                                                                        Vendor Type (Manufacturing Capability) 
+                                                                        <span class="badge bg-primary-subtle text-primary mx-2">-</span>
+                                                                    </h6>
+                                                                    <a><i class="fa fa-chevron-circle-down mt-1"></i></a>
+                                                                </div>
+                                                            </label>
+                                                            <div id="vt" class="mt-2 dropSec vendorSub">
+                                                                <span class="badge text-primary bg-primary-subtle mt-1">
+                                                                    Manufacturing Partners
+                                                                    <span class="badge bg-primary">331</span>
+                                                                </span>
+                                                                <span class="badge text-primary bg-primary-subtle mt-1">
+                                                                    EMS Partners
+                                                                    <span class="badge bg-primary">138</span>
+                                                                </span>
+                                                                <span class="badge text-primary bg-primary-subtle mt-1">
+                                                                    Fabrication Partners
+                                                                    <span class="badge bg-primary">11</span>
+                                                                </span>
+                                                                <span class="badge text-primary bg-primary-subtle mt-1">
+                                                                    RM Suppliers
+                                                                    <span class="badge bg-primary">91</span>
+                                                                </span>
+                                                                <span class="badge text-primary bg-primary-subtle mt-1">
+                                                                    Transport Vendors
+                                                                    <span class="badge bg-primary">24</span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 px-3">
+                                        <div class="subSec">
+                                            <input type="checkbox" id="toggle7" class="toggle-input">
+                                            <label for="toggle7">
+                                                <div class="d-flex justify-content-between">
+                                                    <h6>
+                                                        Manufacturing Partners 
+                                                        <span class="badge bg-primary-subtle text-primary mx-2">-</span>
+                                                    </h6>
+                                                    <a><i class="fa fa-chevron-circle-down mt-1"></i></a>
+                                                </div>
+                                            </label>
+                                            <div id="vcType1" class="dropSec mt-2">
+                                                <span class="badge text-primary bg-primary-subtle mt-1">
+                                                    Machining
+                                                    <span class="badge bg-primary">
+                                                    183
+                                                    </span>
+                                                </span>
+                                                <span class="badge text-primary bg-primary-subtle mt-1">
+                                                    Fabrication
+                                                    <span class="badge bg-primary">
+                                                    42
+                                                    </span>
+                                                </span>
+                                                <span class="badge text-primary bg-primary-subtle mt-1">
+                                                    Sheet Metal- Stamping
+                                                    <span class="badge bg-primary">
+                                                    41
+                                                    </span>
+                                                </span>
+                                                <span class="badge text-primary bg-primary-subtle mt-1">
+                                                    AdditiveAdditive
+                                                    Die Casting
+                                                    <span class="badge bg-primary">
+                                                    6
+                                                    </span>
+                                                </span>
+                                                <span class="badge text-primary bg-primary-subtle mt-1">
+                                                    Die Casting
+                                                    <span class="badge bg-primary">
+                                                    11
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 px-3">
+                                        <div class="subSec">
+                                            <input type="checkbox" id="toggle8" class="toggle-input">
+                                            <label for="toggle8">
+                                                <div class="d-flex justify-content-between">
+                                                    <h6>
+                                                        EMS Partners 
+                                                        <span class="badge bg-primary-subtle text-primary mx-2">-</span>
+                                                    </h6>
+                                                    <a><i class="fa fa-chevron-circle-down mt-1"></i></a>
+                                                </div>
+                                            </label>
+                                            <div id="vcType2" class="dropSec mt-2">
+                                                <span class="badge text-primary bg-primary-subtle mt-1">
+                                                    PCB Assembly 
+                                                    <span class="badge bg-primary">
+                                                    48
+                                                    </span>
+                                                </span>
+                                                <span class="badge text-primary bg-primary-subtle mt-1">
+                                                    PCB Fabrication
+                                                    <span class="badge bg-primary">
+                                                    17
+                                                    </span>
+                                                </span>
+                                                <span class="badge text-primary bg-primary-subtle mt-1">
+                                                    Packaging Solutions Rubber 
+                                                    <span class="badge bg-primary">
+                                                    2
+                                                    </span>
+                                                </span>
+                                                <span class="badge text-primary bg-primary-subtle mt-1">
+                                                    Component Sourcing
+                                                    <span class="badge bg-primary">
+                                                    51
+                                                    </span>
+                                                </span>
+                                                <span class="badge text-primary bg-primary-subtle mt-1">
+                                                    Wire Harness 
+                                                    <span class="badge bg-primary">
+                                                        13
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 px-3">
+                                        <div class="subSec">
+                                            <h6>
+                                                Total  Unique Users
+                                                <span class="badge bg-primary-subtle text-primary mx-2">201</span>
+                                            </h6>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="subSec">
+                                                    <input type="checkbox" id="toggle6" class="toggle-input">
+                                                    <label for="toggle6">
+                                                        <div class="d-flex justify-content-between">
+                                                            <h6>
+                                                                Unique Users per Customer
+                                                                <span class="badge bg-primary-subtle text-primary mx-2">-</span>
+                                                            </h6>
+                                                            <a><i class="fa fa-chevron-circle-down mt-1"></i></a>
+                                                        </div>
+                                                    </label>
+                                                    <div id="uupc" class="mt-2 dropSec">
+                                                        <span class="badge text-primary bg-primary-subtle mt-1">
+                                                            PERT INFO CONSULTING PVT LTD
+                                                            <span class="badge bg-primary">
+                                                            1
+                                                            </span>
+                                                        </span>
+                                                        <span class="badge text-primary bg-primary-subtle mt-1">
+                                                            STANLEY BLACK & DECKER INDIA PVT LTD
+                                                            <span class="badge bg-primary">
+                                                            1
+                                                            </span>
+                                                        </span>
+                                                        <span class="badge text-primary bg-primary-subtle mt-1">
+                                                            BHARAT FRITZ WERNER
+                                                            <span class="badge bg-primary">
+                                                            1
+                                                            </span>
+                                                        </span>
+                                                        <span class="badge text-primary bg-primary-subtle mt-1">
+                                                            AQUA GROUP
+                                                            <span class="badge bg-primary">
+                                                            7
+                                                            </span>
+                                                        </span>
+                                                        <span class="badge text-primary bg-primary-subtle mt-1">
+                                                            SEIZO CNC PRIVATE LIMITED 
+                                                            <span class="badge bg-primary">
+                                                            1
+                                                            </span>
+                                                        </span>
+                                                        <span class="badge text-primary bg-primary-subtle mt-1">
+                                                            MEDHA SERVO DRIVES PVT. LTD
+                                                            <span class="badge bg-primary">
+                                                            5
+                                                            </span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <input type="radio" id="userEngCheck" name="widgt" class="d-none">
+
+                            <div id="userEng" class="widgtSec">
+                                <div class="row">
+                                    <h6 class="text-primary px-3">User Engagement</h6>
+
+                                    <div class="col-md-12 px-3">
+                                        <div class="subSec">
+                                            <h6>
+                                                Number of Weekly active users
+                                                <span class="badge bg-primary-subtle text-primary mx-2">--</span>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 px-3">
+                                        <div class="subSec">
+                                            <h6>
+                                                Number of Monthly active users
+                                                <span class="badge bg-primary-subtle text-primary mx-2">--</span>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 px-3">
+                                        <div class="subSec">
+                                            <input type="checkbox" id="toggle9" class="toggle-input">
+                                            <label for="toggle9">
+                                                <div class="d-flex justify-content-between">
+                                                    <h6>
+                                                        Total RFQs added
+                                                        <span class="badge bg-primary-subtle text-primary mx-2">--</span>
+                                                    </h6>
+                                                    <a><i class="fa fa-chevron-circle-down mt-1"></i></a>
+                                                </div>
+                                            </label>
+
+                                            <div id="rfqSec" class="dropSec mt-2">
+                                                <div class="row border-top mt-3 pt-2">
+                                                    <div class="col-md-12 px-3">
+                                                        <div class="subSec bg-light-subtle">
+                                                            <h6>
+                                                                RFQs added per week
+                                                                <span class="badge bg-primary-subtle text-primary mx-2">--</span>
+                                                            </h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 px-3">
+                                                        <div class="subSec bg-light-subtle">
+                                                            <h6>
+                                                                RFQs added per month
+                                                                <span class="badge bg-primary-subtle text-primary mx-2">--</span>
+                                                            </h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-12 px-3">
+                                        <div class="subSec">
+
+                                            <input type="checkbox" id="toggle10" class="toggle-input">
+                                            <label for="toggle10">
+                                                <div class="d-flex justify-content-between">
+                                                    <h6>
+                                                        Total Customer POs added
+                                                        <span class="badge bg-primary-subtle text-primary mx-2">--</span>
+                                                    </h6>
+                                                    <a><i class="fa fa-chevron-circle-down mt-1"></i></a>
+                                                </div>
+                                            </label>
+
+                                            <div id="cuspoSec" class="dropSec mt-2">
+                                                <div class="row border-top mt-3 pt-2">
+                                                    <div class="col-md-12 px-3">
+                                                        <div class="subSec bg-light-subtle">
+                                                            <h6>
+                                                                Customer POs added per week
+                                                                <span class="badge bg-primary-subtle text-primary mx-2">--</span>
+                                                            </h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 px-3">
+                                                        <div class="subSec bg-light-subtle">
+                                                            <h6>
+                                                                Customer POs added per month
+                                                                <span class="badge bg-primary-subtle text-primary mx-2">--</span>
+                                                            </h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    
+
+                                    <div class="col-md-12 px-3">
+                                        <div class="subSec">
+                                            <h6>
+                                                Total Quotes received
+                                                <span class="badge bg-primary-subtle text-primary mx-2">--</span>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 px-3">
+                                        <div class="subSec">
+                                            <h6>
+                                                Quotes receieved per week
+                                                <span class="badge bg-primary-subtle text-primary mx-2">--</span>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 px-3">
+                                        <div class="subSec">
+                                            <h6>
+                                                Quotes receieved per Month
+                                                <span class="badge bg-primary-subtle text-primary mx-2">--</span>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <input type="radio" id="rev" name="widgt" class="d-none">
+
+                            <div id="revenue" class="widgtSec">
+                                <div class="row">
+                                    <h6 class="text-primary px-3">Revenue</h6>
+
+                                    <div class="col-md-12 px-3">
+                                        <div class="subSec">
+                                            <h6>
+                                                Monthly Recurring Revenue (overall)
+                                                <span class="badge bg-primary-subtle text-primary mx-2">--</span>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 px-3">
+                                        <div class="subSec">
+                                            <h6>
+                                                Monthly Recurring Revenue (organization split up)
+                                                <span class="badge bg-primary-subtle text-primary mx-2">--</span>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <input type="radio" id="sc" name="widgt" class="d-none">
+
+                            <div id="supplyChain" class="widgtSec">
+                                <div class="row">
+                                    <h6 class="text-primary px-3">Supply Chain</h6>
+
+                                    <div class="col-md-12 px-3">
+                                        <div class="subSec">
+                                            <h6>
+                                                Total Vendor Allocations
+                                                <span class="badge bg-primary-subtle text-primary mx-2">--</span>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 px-3">
+                                        <div class="subSec">
+                                            <h6>
+                                                Average Vendor Allocation per month
+                                                <span class="badge bg-primary-subtle text-primary mx-2">--</span>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 px-3">
+                                        <div class="subSec">
+                                            <h6>
+                                                Parts Delivered per month (UOM Split)
+                                                <span class="badge bg-primary-subtle text-primary mx-2">--</span>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 px-3">
+                                        <div class="subSec">
+                                            <h6>
+                                                Price Discovery TAT
+                                                <span class="badge bg-primary-subtle text-primary mx-2">--</span>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 px-3">
+                                        <div class="subSec">
+                                            <h6>
+                                                On time delivery
+                                                <span class="badge bg-primary-subtle text-primary mx-2">--</span>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 px-3">
+                                        <div class="subSec">
+                                            <h6>
+                                                Delivery Acceptance Rate
+                                                <span class="badge bg-primary-subtle text-primary mx-2">--</span>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <br>
+            </div>
+        </div>
+        <!------------------------------------->
+    </div>
+
+</body>

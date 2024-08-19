@@ -1,0 +1,33 @@
+[16-Aug-2024 09:08:43 UTC] PHP Warning:  Undefined array key "data" in /home/x2ofdg2ocou1/public_html/customerportal.machinemaze.com/getdata.php on line 26
+[16-Aug-2024 09:08:43 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/x2ofdg2ocou1/public_html/customerportal.machinemaze.com/getdata.php on line 26
+[16-Aug-2024 15:29:32 Asia/Kolkata] PHP Warning:  Undefined variable $logResp in /home/x2ofdg2ocou1/public_html/customerportal.machinemaze.com/logaction.php on line 24
+[16-Aug-2024 15:29:49 Asia/Kolkata] PHP Warning:  Undefined variable $logResp in /home/x2ofdg2ocou1/public_html/customerportal.machinemaze.com/logaction.php on line 24
+[17-Aug-2024 11:41:45 Asia/Kolkata] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home/x2ofdg2ocou1/public_html/customerportal.machinemaze.com/logaction.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/x2ofdg2ocou1/public_html/customerportal.machinemaze.com/logaction.php on line 14
+[17-Aug-2024 12:13:10 Asia/Kolkata] PHP Warning:  Undefined variable $updateNewSessionLogout in /home/x2ofdg2ocou1/public_html/customerportal.machinemaze.com/logaction.php on line 38
+[17-Aug-2024 12:14:26 Asia/Kolkata] PHP Warning:  Undefined variable $updateNewSessionLogout in /home/x2ofdg2ocou1/public_html/customerportal.machinemaze.com/logaction.php on line 38
+[17-Aug-2024 12:14:26 Asia/Kolkata] PHP Warning:  Array to string conversion in /home/x2ofdg2ocou1/public_html/customerportal.machinemaze.com/logaction.php on line 41
+[17-Aug-2024 12:15:06 Asia/Kolkata] PHP Warning:  Undefined variable $updateNewSessionLogout in /home/x2ofdg2ocou1/public_html/customerportal.machinemaze.com/logaction.php on line 38
+[17-Aug-2024 12:21:34 Asia/Kolkata] PHP Warning:  Undefined variable $sessionLogout in /home/x2ofdg2ocou1/public_html/customerportal.machinemaze.com/logaction.php on line 14
+[17-Aug-2024 12:22:57 Asia/Kolkata] PHP Warning:  Undefined variable $sessionLogout in /home/x2ofdg2ocou1/public_html/customerportal.machinemaze.com/logaction.php on line 14
+[17-Aug-2024 12:24:32 Asia/Kolkata] PHP Warning:  Undefined variable $sessionLogout in /home/x2ofdg2ocou1/public_html/customerportal.machinemaze.com/logaction.php on line 14
+[17-Aug-2024 12:26:02 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Unknown named parameter $Location in /home/x2ofdg2ocou1/public_html/customerportal.machinemaze.com/logaction.php:38
+Stack trace:
+#0 {main}
+  thrown in /home/x2ofdg2ocou1/public_html/customerportal.machinemaze.com/logaction.php on line 38
+[17-Aug-2024 12:26:20 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Unknown named parameter $Location in /home/x2ofdg2ocou1/public_html/customerportal.machinemaze.com/logaction.php:38
+Stack trace:
+#0 {main}
+  thrown in /home/x2ofdg2ocou1/public_html/customerportal.machinemaze.com/logaction.php on line 38
+[17-Aug-2024 12:27:14 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Unknown named parameter $Location in /home/x2ofdg2ocou1/public_html/customerportal.machinemaze.com/logaction.php:38
+Stack trace:
+#0 {main}
+  thrown in /home/x2ofdg2ocou1/public_html/customerportal.machinemaze.com/logaction.php on line 38
+[17-Aug-2024 12:30:11 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Unknown named parameter $Location in /home/x2ofdg2ocou1/public_html/customerportal.machinemaze.com/logaction.php:23
+Stack trace:
+#0 {main}
+  thrown in /home/x2ofdg2ocou1/public_html/customerportal.machinemaze.com/logaction.php on line 23
+[19-Aug-2024 06:09:23 UTC] PHP Parse error:  syntax error, unexpected token "[", expecting ")" in /home/x2ofdg2ocou1/public_html/customerportal.machinemaze.com/logaction.php on line 12
+[19-Aug-2024 06:09:25 UTC] PHP Parse error:  syntax error, unexpected token "[", expecting ")" in /home/x2ofdg2ocou1/public_html/customerportal.machinemaze.com/logaction.php on line 12

@@ -1,0 +1,192 @@
+<html lang="en">
+
+<head>
+  <title>BUYER DASHBOARD</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" integrity="sha512-rqQltXRuHxtPWhktpAZxLHUVJ3Eombn3hvk9PHjV/N5DMUYnzKPC1i3ub0mEXgFzsaZNeJcoE0YHq0j/GFsdGg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+  
+  <style>
+  nav ul {
+    background: #ddd;
+    font-size: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .container {
+    width: 100%;
+    height: 67px;
+    background-color: #ffffff;
+    overflow-x: auto;
+  }
+  
+  .cf {
+    white-space: nowrap;
+  }
+  
+  .wrapit {
+    white-space: normal;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    /* position: relative; */
+    min-width: 33%;
+  }
+  
+  nav a {
+    background: #ddd;
+    color: #444;
+    display: block;
+    font: bold 16px/50px sans-serif;
+    padding: 0 25px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    transition: all .25s ease;
+  }
+  
+  nav .dropdown:after {
+    content: ' \25bc';
+  }
+  
+  nav li:hover a {
+    background: #ccc;
+  }
+  
+  nav li ul {
+    opacity: 0;
+    position: absolute;
+    width: 165px;
+    top: 35px;
+    visibility: hidden;
+    z-index: 1;
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    transition: all .25s ease;
+  }
+  
+  nav li:hover ul {
+    opacity: 1;
+    top: 50px;
+    visibility: visible;
+  }
+  
+  nav li ul li {
+    width: 100%;
+  }
+  
+  nav li ul a:hover {
+    background: #bbb;
+  }
+  </style>
+
+  </head>
+
+<div class="container">
+    <nav>
+      <ul class="cf">
+        <li><a href="#">Menu Item 1</a></li>
+        <li><a class="dropdown" href="#">Menu Item 2</a>
+          <ul class="wrapit">
+            <li><a href="#">Sub-menu Item 1</a></li>
+            <li><a href="#">Sub-menu Item 2</a></li>
+            <li><a href="#">Sub-menu Item 3</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Menu Item 3</a></li>
+        <li><a href="#">Menu Item 3</a></li>
+        <li><a href="#">Menu Item 3</a></li>
+      </ul>
+    </nav>
+  </div>
+
+<div class="container">
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid justify-content-end">
+
+    <input type="checkbox" id="toggle" class="d-none">
+    <label for="toggle" class="navbar-toggler border-0" tabindex="1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">       <span class="navbar-toggler-icon"></span>     </label>            
+    
+    <div class="collapse navbar-collapse" id="navbarScroll">
+
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
+
+            <li class="nav-item active"><a class="nav-link" href="#" id="showdashboard"> <i class="fas fa-home"></i> Manufacturing Summary</a>          </li>
+            <li class="nav-item dropdown">
+                <span class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <i class="fas fa-tasks"></i> Your RFQ's  </span>                           
+                <ul class="dropdown-menu">
+                    <li>    <a class="dropdown-item" href="#"><i class="fa fa-chart-line"></i>Upload RFQ</a>      </li>
+                    <li>    <a class="dropdown-item" href="#" id="showrfqlist"><i class="fa fa-upload"></i> RFQ List</a>      </li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <span class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <i class="fas fa-industry"></i> Your Project </span>                              
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#" id="showProDash"><i class="fa fa-sync"></i> Project Dashboard</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+                <span class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">  <i class="fas fa-money-bill-alt"></i> Order Management </span>                              
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#" id="showpa"><i class="fa fa-list-alt"></i> Price Approval</a></li>
+                  <li><a class="dropdown-item" href="#" id="showInvoice"><i class="fa fa-chart-area"></i> Invoice</a></li>
+                  <li><a class="dropdown-item" href="#" id="showpo"><i class="fa fa-list-alt"></i> PO</a></li>
+                  <li><a class="dropdown-item" href="#" id="showpf"><i class="fa fa-chart-area"></i> Partner Financials</a></li>
+                  <li><a class="dropdown-item" href="#" id="showcost"><i class="fa fa-chart-area"></i>Costing</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+                <span class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <i class="fas fa-book-open"></i> Analytics </span>                              
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" href="#"><i class="fa fa-book"></i> Delivery Trands</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="nav-item ">
+                <a class="nav-link" href="#" id="showpartner"> <i class="fas fa-home"></i> Your Partner </a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="#" id="showds"> <i class="fas fa-home"></i>  Delivery Schedule</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="#" id="showqc"> <i class="fas fa-home"></i> Quality Control</a> 
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"> <i class="fas fa-home"></i> Chat with us</a>          
+            </li>
+
+        </ul>
+
+        <li>  
+            <a class="nav-link" href="#">  <i class="fas fa-user userp"></i> User name </a>   
+        </li>
+    
+      </div>
+    </div>
+</nav>
+</div>

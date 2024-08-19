@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+        .button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: #f0f0f0;
+  transition: background-color 0.5s;
+}
+
+#toggle:checked + .button + .box {
+  background-color: #007bff;
+  color: white;
+}
+
+#toggle:not(:checked) + .button + .box {
+  background-color: #f0f0f0;
+  color: black;
+}
+
+  </style>
+</head>
+<body>
+
+    <input type="checkbox" id="toggle" class="d-none">
+    <label for="toggle" class="button">Toggle Class</label>
+    
+    <div class="box">Box</div>
+    
+</body>
+</html>
