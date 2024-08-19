@@ -2,25 +2,7 @@
 include '../header.php';
 include '../nav.php';
 include '../footer.php';
-$project_dash_res_data = getOpenProjects();
-$completepro_dash_res_data = getCompletedProjects();
-$cancelledpro_dash_res_data = getCancelledProjects();
-$holdpro_dash_res_data = getHoldProjects();
-$project_dash_res_count = $completepro_dash_res_count =
-  $cancelledpro_dash_res_count = $holdpro_dash_res_count = 0;
-if (isset($project_dash_res_data) && array_key_exists('data', $project_dash_res_data)) {
-  $project_dash_res_count = count($project_dash_res_data['data']) ?? 0;
-}
-if (isset($completepro_dash_res_data) && array_key_exists('data', $completepro_dash_res_data)) {
-  $completepro_dash_res_count = count($completepro_dash_res_data['data']) ?? 0;
-}
-if (isset($cancelledpro_dash_res_data) && array_key_exists('data', $cancelledpro_dash_res_data)) {
-  $cancelledpro_dash_res_count = count($cancelledpro_dash_res_data['data']) ?? 0;
-}
-if (isset($holdpro_dash_res_data) && array_key_exists('data', $holdpro_dash_res_data)) {
-  $holdpro_dash_res_count = count($holdpro_dash_res_data['data']) ?? 0;
-}
-$total_project_count = $project_dash_res_count + $completepro_dash_res_count + $cancelledpro_dash_res_count + $holdpro_dash_res_count ?>
+?>
 <style>
   #mapCanvas {
     width: 100%;
